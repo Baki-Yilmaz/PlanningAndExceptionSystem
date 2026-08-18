@@ -1,0 +1,524 @@
+[
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.ActualSale, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IActualSalesService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/ActualSales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.ActualSale, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IActualSalesService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/ActualSales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.ActualSale",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.ActualSale, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IActualSalesService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/ActualSales/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.ActualSale, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IActualSalesService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/ActualSales/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Brand, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IBrandService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Brand, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IBrandService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Brands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.DbFirst.Brand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Brand, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IBrandService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Brands/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Brand, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IBrandService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Brands/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Category, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICategoryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Category, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICategoryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.DbFirst.Category",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Category, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICategoryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.DbFirst.Category, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICategoryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Categories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Country, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICountryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Countries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Country, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICountryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Countries",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.Country",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Country, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICountryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Countries/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Country, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ICountryService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Countries/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IPlanningWeekService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/PlanningWeeks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IPlanningWeekService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/PlanningWeeks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IPlanningWeekService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/PlanningWeeks/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IPlanningWeekService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/PlanningWeeks/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Product, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IProductService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Product, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IProductService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Product, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IProductService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Products/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Product, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IProductService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Season, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ISeasonService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Seasons",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Season, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ISeasonService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Seasons",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.Season",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Season, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ISeasonService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Seasons/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Season, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.ISeasonService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Seasons/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Shop, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IShopService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Shops",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Shop, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IShopService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Shops",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.Shop",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Shop, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IShopService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Shops/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.Shop, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IShopService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Shops/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.User, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IUserService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.User, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IUserService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "PlanningAndExceptionSystem.Models.CodeFirst.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.User, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IUserService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PlanningAndExceptionSystem.Controllers.CustomBaseController\u00602[[PlanningAndExceptionSystem.Models.CodeFirst.User, PlanningAndExceptionSystem.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[PlanningAndExceptionSystem.Services.Interfaces.IUserService, PlanningAndExceptionSystem.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

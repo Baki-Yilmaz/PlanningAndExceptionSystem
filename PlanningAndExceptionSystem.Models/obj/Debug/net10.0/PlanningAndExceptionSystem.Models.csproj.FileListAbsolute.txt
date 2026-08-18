@@ -1,0 +1,14 @@
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\bin\Debug\net10.0\PlanningAndExceptionSystem.Models.deps.json
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\bin\Debug\net10.0\PlanningAndExceptionSystem.Models.runtimeconfig.json
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\bin\Debug\net10.0\PlanningAndExceptionSystem.Models.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\bin\Debug\net10.0\PlanningAndExceptionSystem.Models.pdb
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.csproj.AssemblyReference.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.AssemblyInfoInputs.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.AssemblyInfo.cs
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.csproj.CoreCompileInputs.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\refint\PlanningAndExceptionSystem.Models.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.pdb
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.genruntimeconfig.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\ref\PlanningAndExceptionSystem.Models.dll

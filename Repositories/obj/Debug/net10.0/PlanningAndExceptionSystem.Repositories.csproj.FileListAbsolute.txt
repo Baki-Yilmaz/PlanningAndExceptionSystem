@@ -1,0 +1,17 @@
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\bin\Debug\net10.0\PlanningAndExceptionSystem.Repositories.deps.json
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\bin\Debug\net10.0\PlanningAndExceptionSystem.Repositories.runtimeconfig.json
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\bin\Debug\net10.0\PlanningAndExceptionSystem.Repositories.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\bin\Debug\net10.0\PlanningAndExceptionSystem.Repositories.pdb
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\bin\Debug\net10.0\PlanningAndExceptionSystem.Models.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\bin\Debug\net10.0\PlanningAndExceptionSystem.Models.pdb
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.csproj.AssemblyReference.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.AssemblyInfoInputs.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.AssemblyInfo.cs
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\Planning.7C34E264.Up2Date
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\refint\PlanningAndExceptionSystem.Repositories.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.pdb
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.genruntimeconfig.cache
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\ref\PlanningAndExceptionSystem.Repositories.dll
