@@ -15,3 +15,4 @@ C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.pdb
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.genruntimeconfig.cache
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\ref\PlanningAndExceptionSystem.Repositories.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\Repositories\obj\Debug\net10.0\PlanningAndExceptionSystem.Repositories.sourcelink.json

@@ -1,4 +1,5 @@
 ﻿using PlanningAndExceptionSystem.Models.DbFirst;
+using System.Text.Json.Serialization;
 
 namespace PlanningAndExceptionSystem.Models.CodeFirst
 {
@@ -7,6 +8,8 @@ namespace PlanningAndExceptionSystem.Models.CodeFirst
         public string ShopCode{ get; set; }
         public string ShopName { get; set; }
         public int CountryId { get; set; }
-        public virtual Country Country { get; set; }
+
+        [JsonIgnore]
+        public virtual Country? Country { get; set; }
     }
 }

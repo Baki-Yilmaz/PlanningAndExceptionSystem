@@ -2,6 +2,7 @@
 using PlanningAndExceptionSystem.Services.Exceptions;
 using System.Net;
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace PlanningAndExceptionSystem
 {
@@ -39,9 +40,11 @@ namespace PlanningAndExceptionSystem
             {
                 NotFoundException => BaseResponse<object>.NotFound(exception.Message),
                 BadRequestException => BaseResponse<object>.BadRequest(exception.Message),
+                DbUpdateException => BaseResponse<object>.DbForeignKeyError(),
+                _ => BaseResponse<object>.FailResultNoData()                
             };
 
-            context.Response.StatusCode = response.StatusCode;
+            context.Response.StatusCode = (int)statusCode;
 
             var jsonResponse = JsonSerializer.Serialize(response);
             return context.Response.WriteAsync(jsonResponse);

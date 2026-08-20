@@ -7,7 +7,7 @@ namespace PlanningAndExceptionSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomBaseController<T, TService> : ControllerBase
+    public class CustomBaseController<T,TService> : ControllerBase
         where T : class
         where TService : IService<T>
     {
@@ -19,9 +19,9 @@ namespace PlanningAndExceptionSystem.Controllers
         }
 
         [NonAction]
-        public IActionResult CreateActionResultInstance<TResponse>(BaseResponse<TResponse> response)
+        public IActionResult CreateActionResultInstance<TResponse>(BaseResponse<TResponse> response, int statusCode = 200)
         {
-            return StatusCode(response.StatusCode, response);
+            return StatusCode(statusCode, response);
         }
 
         [HttpGet]
@@ -53,7 +53,6 @@ namespace PlanningAndExceptionSystem.Controllers
         {
             var creaatedEntity = await _service.AddAsync(entity);
             var response = BaseResponse<T>.SuccessResult(creaatedEntity);
-
             return CreateActionResultInstance(response);
         }
 

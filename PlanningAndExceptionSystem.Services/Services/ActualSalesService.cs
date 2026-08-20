@@ -1,10 +1,7 @@
 ﻿using PlanningAndExceptionSystem.Models.CodeFirst;
-using PlanningAndExceptionSystem.Models.DbFirst;
 using PlanningAndExceptionSystem.Repositories.Interfaces;
 using PlanningAndExceptionSystem.Services.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.Json;
+using PlanningAndExceptionSystem.Services.Exceptions;
 
 namespace PlanningAndExceptionSystem.Services.Services
 {
@@ -24,7 +21,7 @@ namespace PlanningAndExceptionSystem.Services.Services
 
             if (product == null)
             {
-                throw new Exception("Sistemde bu ID'ye ait bir Ürün bulunamadı!");
+                throw NotFoundException.ProductNotFound(productId);
             }
 
             actualSale.ProductId = productId;

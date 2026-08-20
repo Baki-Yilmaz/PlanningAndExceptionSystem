@@ -1123,9 +1123,6 @@
           "countryId": {
             "type": "integer",
             "format": "int32"
-          },
-          "country": {
-            "$ref": "#/components/schemas/Country"
           }
         },
         "additionalProperties": false
@@ -1147,6 +1144,14 @@
             "nullable": true
           },
           "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
             "type": "string",
             "nullable": true
           },

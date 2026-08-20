@@ -9,6 +9,7 @@ namespace PlanningAndExceptionSystem.Controllers
     public class ActualSalesController : CustomBaseController<ActualSale, IActualSalesService>
     {
         public ActualSalesController(IActualSalesService service) : base(service)
-        { }
+        {
+        }
     }
 }

@@ -17,3 +17,4 @@ C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSy
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Services\obj\Debug\net10.0\PlanningAndExceptionSystem.Services.pdb
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Services\obj\Debug\net10.0\PlanningAndExceptionSystem.Services.genruntimeconfig.cache
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Services\obj\Debug\net10.0\ref\PlanningAndExceptionSystem.Services.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Services\obj\Debug\net10.0\PlanningAndExceptionSystem.Services.sourcelink.json

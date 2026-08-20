@@ -12,3 +12,4 @@ C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSy
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.pdb
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.genruntimeconfig.cache
 C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\ref\PlanningAndExceptionSystem.Models.dll
+C:\Users\HPRKST88\source\repos\PlanningAndExceptionSystem\PlanningAndExceptionSystem.Models\obj\Debug\net10.0\PlanningAndExceptionSystem.Models.sourcelink.json
