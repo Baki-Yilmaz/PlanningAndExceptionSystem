@@ -51,7 +51,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("ExceptionActionId");
 
-                    b.ToTable("ActionApprovals");
+                    b.ToTable("ActionApprovals", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.ActualSale", b =>
@@ -65,7 +65,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("PlanningWeekId")
+                    b.Property<int?>("PlanningMonthsId")
                         .HasColumnType("int");
 
                     b.Property<int>("ProductId")
@@ -91,13 +91,13 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PlanningWeekId");
+                    b.HasIndex("PlanningMonthsId");
 
                     b.HasIndex("ProductId");
 
                     b.HasIndex("ShopId");
 
-                    b.ToTable("ActualSales");
+                    b.ToTable("ActualSales", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.Country", b =>
@@ -128,7 +128,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries");
+                    b.ToTable("Countries", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.ExceptionAction", b =>
@@ -165,7 +165,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("PlanningExceptionId");
 
-                    b.ToTable("ExceptionActions");
+                    b.ToTable("ExceptionActions", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.ExceptionRule", b =>
@@ -198,7 +198,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ExceptionRules");
+                    b.ToTable("ExceptionRules", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.PlanningException", b =>
@@ -236,7 +236,46 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("SalesPlanId");
 
-                    b.ToTable("PlanningExceptions");
+                    b.ToTable("PlanningExceptions", (string)null);
+                });
+
+            modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.PlanningMonths", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("MonthName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MonthNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Quarter")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PlanningMonths", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek", b =>
@@ -257,9 +296,6 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PlanningWeekId")
-                        .HasColumnType("int");
-
                     b.Property<int>("SeasonId")
                         .HasColumnType("int");
 
@@ -271,9 +307,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PlanningWeekId");
-
-                    b.ToTable("PlanningWeeks");
+                    b.ToTable("PlanningWeeks", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.Product", b =>
@@ -318,7 +352,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.SalesPlan", b =>
@@ -335,15 +369,15 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("PlanningMonthsId")
+                        .HasColumnType("int");
+
                     b.Property<string>("SalesPlanCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TargetProfit")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("TargetQuantity")
-                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
@@ -355,9 +389,11 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("PlanningMonthsId");
+
                     b.HasIndex("UserId");
 
-                    b.ToTable("SalesPlans");
+                    b.ToTable("SalesPlans", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.Season", b =>
@@ -396,7 +432,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("PlanningWeekId");
 
-                    b.ToTable("Seasons");
+                    b.ToTable("Seasons", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.Shop", b =>
@@ -428,7 +464,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Shops");
+                    b.ToTable("Shops", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.User", b =>
@@ -463,7 +499,7 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.DbFirst.Brand", b =>
@@ -581,11 +617,10 @@ namespace PlanningAndExceptionSystem.Models.Migrations
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.ActualSale", b =>
                 {
-                    b.HasOne("PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek", "Week")
+                    b.HasOne("PlanningAndExceptionSystem.Models.CodeFirst.PlanningMonths", "PlanningMonth")
                         .WithMany()
-                        .HasForeignKey("PlanningWeekId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("PlanningMonthsId")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("PlanningAndExceptionSystem.Models.CodeFirst.Product", "Product")
                         .WithMany()
@@ -599,11 +634,11 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.Navigation("PlanningMonth");
+
                     b.Navigation("Product");
 
                     b.Navigation("Shop");
-
-                    b.Navigation("Week");
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.ExceptionAction", b =>
@@ -644,14 +679,6 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                     b.Navigation("SalesPlan");
                 });
 
-            modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek", b =>
-                {
-                    b.HasOne("PlanningAndExceptionSystem.Models.CodeFirst.SalesPlan", null)
-                        .WithMany("PlanningWeek")
-                        .HasForeignKey("PlanningWeekId")
-                        .OnDelete(DeleteBehavior.NoAction);
-                });
-
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.Product", b =>
                 {
                     b.HasOne("PlanningAndExceptionSystem.Models.DbFirst.Brand", "Brand")
@@ -679,6 +706,11 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("PlanningAndExceptionSystem.Models.CodeFirst.PlanningMonths", "PlanningMonth")
+                        .WithMany()
+                        .HasForeignKey("PlanningMonthsId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.HasOne("PlanningAndExceptionSystem.Models.CodeFirst.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
@@ -686,6 +718,8 @@ namespace PlanningAndExceptionSystem.Models.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+
+                    b.Navigation("PlanningMonth");
 
                     b.Navigation("User");
                 });
@@ -731,11 +765,6 @@ namespace PlanningAndExceptionSystem.Models.Migrations
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.PlanningWeek", b =>
                 {
                     b.Navigation("Season");
-                });
-
-            modelBuilder.Entity("PlanningAndExceptionSystem.Models.CodeFirst.SalesPlan", b =>
-                {
-                    b.Navigation("PlanningWeek");
                 });
 
             modelBuilder.Entity("PlanningAndExceptionSystem.Models.DbFirst.Category", b =>

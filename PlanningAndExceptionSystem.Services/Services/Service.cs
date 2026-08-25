@@ -31,7 +31,7 @@ namespace PlanningAndExceptionSystem.Services.Services
             return _repository.Where(expression);
         }
 
-        public async Task<T> AddAsync(T entity)
+        public virtual async Task<T> AddAsync(T entity)
         {
             await _repository.AddAsync(entity);
             await _unitOfWork.CommitAsync();

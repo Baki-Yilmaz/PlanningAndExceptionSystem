@@ -28,8 +28,9 @@ export default function LoginPage() {
       if (response.ok) {
         localStorage.setItem('auth', base64Credentials);
         alert('Giriş başarılı!');
-        router.push('/');       } else {
-        alert('Giriş başarısız: E-posta veya şifre hatalı!');
+        router.push('/');
+      } else {
+        alert('Giriş başarısız: Kullanıcı adı veya şifre hatalı!');
       }
     } catch (error) {
       console.error('Giriş hatası:', error);
@@ -51,16 +52,16 @@ export default function LoginPage() {
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
             <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">
-              E-posta Adresi
+              Kullanıcı Adı / E-posta
             </label>
             <div className="relative">
               <Mail className="absolute left-3 top-2.5 text-outline" size={18} />
               <input 
-                type="email" 
+                type="text" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                placeholder="ornek@eren.com"
+                placeholder="Kullanıcı adınızı girin"
                 className="w-full pl-10 pr-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
             </div>

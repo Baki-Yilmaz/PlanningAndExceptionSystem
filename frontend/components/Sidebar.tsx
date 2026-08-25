@@ -11,9 +11,7 @@ export default function Sidebar() {
   // Link aktifse mavi, aktif değilse gri stil uygulanır.
   const getLinkClass = (path: string) => {
     const isActive =
-      path === '/'
-        ? pathname === '/'
-        : pathname.startsWith(path);
+      path === '/' ? pathname === '/' : pathname.startsWith(path);
 
     return `flex items-center px-4 py-2.5 rounded-r-lg transition-colors ${
       isActive
@@ -46,10 +44,8 @@ export default function Sidebar() {
       <ul className="flex-1 space-y-1 overflow-y-auto pr-2">
         {/* Dashboard */}
         <li>
-          <Link href="/" className={getLinkClass('/')}>
-            <span className="material-symbols-outlined mr-3">
-              dashboard
-            </span>
+          <Link href="/dashboard" className={getLinkClass('/dashboard')}>
+            <span className="material-symbols-outlined mr-3">dashboard</span>
             <span>Kontrol Paneli</span>
           </Link>
         </li>

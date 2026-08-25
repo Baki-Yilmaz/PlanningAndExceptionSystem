@@ -1,6 +1,7 @@
 ﻿using PlanningAndExceptionSystem.Models.DbFirst;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace PlanningAndExceptionSystem.Models.CodeFirst
 {
@@ -23,9 +24,11 @@ namespace PlanningAndExceptionSystem.Models.CodeFirst
         public decimal CostPrice { get; set; }
         
         public int BrandId { get; set; }
+        [JsonIgnore]
         public virtual Brand? Brand { get; set; }
        
         public int CategoryId { get; set; }
+        [JsonIgnore]
         public virtual Category? Category { get; set; }
     }
 }

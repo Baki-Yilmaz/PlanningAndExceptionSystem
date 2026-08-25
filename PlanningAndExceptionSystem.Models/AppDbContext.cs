@@ -21,6 +21,7 @@ public class AppDbContext : DbContext
     public DbSet<Season> Seasons{ get; set; }
     public DbSet<Shop> Shops{ get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<PlanningMonths> PlanningMonths{ get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

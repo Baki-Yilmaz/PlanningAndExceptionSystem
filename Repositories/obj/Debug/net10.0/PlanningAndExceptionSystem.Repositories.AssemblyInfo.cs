@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanningAndExceptionSystem.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b4119de36f377ebe3044142c0a5b9afb0f617a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+172048fe6fe26d6d1fc5236478c4843f9a81054f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanningAndExceptionSystem.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanningAndExceptionSystem.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

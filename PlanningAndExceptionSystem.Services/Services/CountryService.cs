@@ -1,5 +1,4 @@
 ﻿using PlanningAndExceptionSystem.Models.CodeFirst;
-using PlanningAndExceptionSystem.Models.DbFirst;
 using PlanningAndExceptionSystem.Repositories.Interfaces;
 using PlanningAndExceptionSystem.Services.Interfaces;
 

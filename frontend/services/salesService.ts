@@ -2,7 +2,7 @@ import {apiClient} from './api';
 
 export interface ActualSaleDto {
     shopID: number;
-    planningWeekId: number;
+    planningMonthId: number;
     productId: number;
     soldQuantity: number;
     totalCost: number;
@@ -20,3 +20,15 @@ export async function createActualSale(data: ActualSaleDto) {
     body: JSON.stringify(data),
   });
 }
+
+export async function getPlanningMonths(){
+    return apiClient<any[]>('/PlanningMonths');
+}
+
+export async function getProductsForSales(){
+    return apiClient<any[]>('/Products');
+}
+
+export async function getShopsForSales(){
+    return apiClient<any[]>('/Shops');
+} 

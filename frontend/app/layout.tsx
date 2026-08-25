@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isLoginPage = pathname === '/login'; // Şu an login sayfasında mıyız?
+  const isLoginPage = pathname === '/login';
 
   const getPageTitle = (path: string) => {
     switch (path) {
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="h-full flex bg-surface text-on-surface overflow-hidden">
+        <Toaster position="top-right" reverseOrder={false} />
         
         {/* EĞER LOGIN SAYFASINDA DEĞİLSEK SIDEBAR'I GÖSTER */}
         {!isLoginPage && <Sidebar />}

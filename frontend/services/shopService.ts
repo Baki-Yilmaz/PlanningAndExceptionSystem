@@ -16,3 +16,7 @@ export async function createShop(data: ShopDto) {
         body: JSON.stringify(data),
     });
 }
+
+export async function getCountries() {
+    return apiClient<any[]>('/Countries');
+}

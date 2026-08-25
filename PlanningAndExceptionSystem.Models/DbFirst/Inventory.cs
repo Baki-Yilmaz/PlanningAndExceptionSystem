@@ -1,6 +1,6 @@
 ﻿using PlanningAndExceptionSystem.Models.CodeFirst;
-
 namespace PlanningAndExceptionSystem.Models.DbFirst;
+using System.Text.Json.Serialization;   
 
 public partial class Inventory : BaseEntity
 {
@@ -12,7 +12,9 @@ public partial class Inventory : BaseEntity
 
     public int Quantity { get; set; }
 
-    public virtual Category Category { get; set; } = null!;
+    [JsonIgnore]
+    public virtual Category? Category { get; set; } = null!;
 
-    public virtual Shop Shop { get; set; }
+    [JsonIgnore]
+    public virtual Shop? Shop { get; set; }
 }

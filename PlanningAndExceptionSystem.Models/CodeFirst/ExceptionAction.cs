@@ -1,13 +1,22 @@
-﻿namespace PlanningAndExceptionSystem.Models.CodeFirst
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.Text.Json.Serialization;
+
+namespace PlanningAndExceptionSystem.Models.CodeFirst
 {
     public class ExceptionAction : BaseEntity
     {
         public int PlanningExceptionId { get; set; }
-        public virtual PlanningException PlanningException { get; set; }
+
+        [ValidateNever]
+        [JsonIgnore]
+        public virtual PlanningException? PlanningException { get; set; }
 
         public string ActionType { get; set; }
         public string Status { get; set; }
         public int CreatedById { get; set; }
-        public virtual User CreatedBy { get; set; }
+
+        [ValidateNever]
+        [JsonIgnore]
+        public virtual User? CreatedBy { get; set; }
     }
 }

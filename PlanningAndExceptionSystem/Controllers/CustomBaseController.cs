@@ -49,7 +49,7 @@ namespace PlanningAndExceptionSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(T entity)
+        public virtual async Task<IActionResult> Create(T entity)
         {
             var creaatedEntity = await _service.AddAsync(entity);
             var response = BaseResponse<T>.SuccessResult(creaatedEntity);

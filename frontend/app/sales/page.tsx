@@ -1,63 +1,88 @@
-'use client'; // Bu sayfanın tarayıcı tarafında (Client Component) çalışacağını belirtir
+'use client';
 
 import { useState, useEffect } from 'react';
 import { PlusCircle, ShoppingCart } from 'lucide-react';
-// Staj sorumlunun istediği gibi, tüm API işlemlerini özel servisimizden çağırıyoruz
-import { createActualSale, getActualSales } from '@/services/salesService';
+import { createActualSale, getActualSales, getPlanningMonths, getProductsForSales, getShopsForSales } from '@/services/salesService';
+import toast from 'react-hot-toast';
 
 export default function SalesPage() {
-  // --- STATE (Hafıza) TANIMLAMALARI ---
-  const [shopId, setShopId] = useState('1');
-  const [planningWeekId, setPlanningWeekId] = useState('1');
+  const [shopId, setShopId] = useState('');
+  const [planningMonthId, setPlanningMonthId] = useState('');
   const [productId, setProductId] = useState('');
   const [soldQuantity, setSoldQuantity] = useState('');
+  
+  // Otomatik hesaplanan alanlar (Salt okunur / Readonly)
   const [totalCost, setTotalCost] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
   const [profit, setProfit] = useState('');
+  
+  const [shopsList, setShopsList] = useState<any[]>([]);
+  const [monthsList, setMonthsList] = useState<any[]>([]);
+  const [productsList, setProductsList] = useState<any[]>([]);
+  const [salesList, setSalesList] = useState<any[]>([]);
+  
   const [loading, setLoading] = useState(false);
 
-  // Veritabanından çekilen satış listesini tutacağımız state
-  const [salesList, setSalesList] = useState<any[]>([]);
-
-  // --- SAYFA YÜKLENDİĞİNDE ÇALIŞACAK FONKSİYON ---
-  // useEffect: Sayfa ilk açıldığında (mount olduğunda) verileri getirmek için kullanılır
   useEffect(() => {
-    fetchSales();
+    fetchData();
   }, []);
 
-  // Satışları backend'den çeken fonksiyon
- const fetchSales = async () => {
+  const fetchData = async () => {
     try {
-      const response: any = await getActualSales();
-      
-      console.log("Backend'den gelen ham veri:", response);
+      const [salesRes, shopRes, monthRes, prodRes] = await Promise.all([
+        getActualSales(),
+        getShopsForSales().catch(() => []),
+        getPlanningMonths().catch(() => []),
+        getProductsForSales().catch(() => [])
+      ]);
 
-      if (Array.isArray(response)) {
-        setSalesList(response);
-      } 
-      else if (response && Array.isArray(response.data)) {
-        setSalesList(response.data);
-      } 
-      else {
-        setSalesList([]);
-      }
-
+      setSalesList(Array.isArray(salesRes) ? salesRes : salesRes.data || []);
+      setShopsList(Array.isArray(shopRes) ? shopRes : shopRes.data || []);
+      setMonthsList(Array.isArray(monthRes) ? monthRes : monthRes.data || []);
+      setProductsList(Array.isArray(prodRes) ? prodRes : prodRes.data || []);
     } catch (error) {
-      console.error('Satışlar yüklenirken hata oluştu:', error);
-      setSalesList([]);
+      console.error('Veriler yüklenirken hata oluştu:', error);
     }
   };
 
-  // --- FORM GÖNDERME (KAYDETME) İŞLEMİ ---
+  // Ürün veya Miktar değiştiğinde Maliyet, Tutar ve Kâr'ı anında hesapla
+  const handleProductOrQuantityChange = (selectedProductId: string, quantity: string) => {
+    setProductId(selectedProductId);
+    setSoldQuantity(quantity);
+
+    if (!selectedProductId || !quantity || Number(quantity) <= 0) {
+      setTotalCost('');
+      setTotalAmount('');
+      setProfit('');
+      return;
+    }
+
+    const product = productsList.find((p) => p.id === Number(selectedProductId));
+    if (product) {
+      const qty = Number(quantity);
+      const calculatedCost = qty * (product.costPrice || 0);
+      const calculatedAmount = qty * (product.unitPrice || 0);
+      const calculatedProfit = calculatedAmount - calculatedCost;
+
+      setTotalCost(calculatedCost.toFixed(2));
+      setTotalAmount(calculatedAmount.toFixed(2));
+      setProfit(calculatedProfit.toFixed(2));
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!shopId || !planningMonthId || !productId) {
+      toast.error('Lütfen Mağaza, Planlama Ayı ve Ürün seçin!');
+      return;
+    }
+
     setLoading(true);
 
     try {
-      // Servisimiz aracılığıyla backend'e kayıt atıyoruz
       await createActualSale({
         shopID: Number(shopId),
-        planningWeekId: Number(planningWeekId),
+        planningMonthId: Number(planningMonthId),
         productId: Number(productId),
         soldQuantity: Number(soldQuantity),
         totalCost: Number(totalCost),
@@ -65,21 +90,17 @@ export default function SalesPage() {
         profit: Number(profit),
       });
 
-      alert('Satış başarıyla kaydedildi!');
+      toast.success('Satış başarıyla kaydedildi!');
       
-      // Form alanlarını sıfırlıyoruz
       setProductId('');
       setSoldQuantity('');
       setTotalCost('');
       setTotalAmount('');
       setProfit('');
-
-      // Kayıttan hemen sonra tablonun güncel halini tekrar çekiyoruz (Listeyi yenileme)
-      fetchSales();
-
+      
+      fetchData();
     } catch (error: any) {
-      console.error('Kayıt hatası:', error);
-      alert(`Kayıt başarısız: ${error.message}`);
+      toast.error(`Kayıt başarısız: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -87,15 +108,14 @@ export default function SalesPage() {
 
   return (
     <div>
-      {/* Sayfa Başlığı */}
       <div className="mb-8">
         <h3 className="text-3xl font-bold text-on-surface mb-1">Satış Yönetimi</h3>
-        <p className="text-sm text-on-surface-variant">Yeni satış kaydı oluşturun ve mevcut satışları listeleyin.</p>
+        <p className="text-sm text-on-surface-variant">Gerçekleşen satış kayıtlarını oluşturun ve mevcut satışları inceleyin.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        {/* SOL TARAF: Yeni Satış Formu */}
+        {/* SOL TARAF: Form */}
         <div className="lg:col-span-1 bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
           <h4 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
             <PlusCircle className="text-primary" size={22} />
@@ -104,32 +124,69 @@ export default function SalesPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Mağaza ID</label>
-              <input type="number" value={shopId} onChange={(e) => setShopId(e.target.value)} required className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
+              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Mağaza</label>
+              <select value={shopId} onChange={(e) => setShopId(e.target.value)} required className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm">
+                <option value="">Mağaza Seçin</option>
+                {shopsList.map((shop) => (
+                  <option key={shop.id} value={shop.id}>{shop.shopName || shop.shopCode}</option>
+                ))}
+              </select>
             </div>
+
             <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Hafta ID</label>
-              <input type="number" value={planningWeekId} onChange={(e) => setPlanningWeekId(e.target.value)} required className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
+              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Planlama Ayı</label>
+              <select value={planningMonthId} onChange={(e) => setPlanningMonthId(e.target.value)} required className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm">
+                <option value="">Ay Seçin</option>
+                {monthsList.map((month) => (
+                  <option key={month.id} value={month.id}>
+                    {month.monthName || `Ay #${month.id}`}
+                  </option>
+                ))}
+              </select>
             </div>
+
             <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Ürün ID</label>
-              <input type="number" value={productId} onChange={(e) => setProductId(e.target.value)} required placeholder="Örn: 1" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
+              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Ürün</label>
+              <select 
+                value={productId} 
+                onChange={(e) => handleProductOrQuantityChange(e.target.value, soldQuantity)} 
+                required 
+                className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm"
+              >
+                <option value="">Ürün Seçin</option>
+                {productsList.map((prod) => (
+                  <option key={prod.id} value={prod.id}>{prod.productName}</option>
+                ))}
+              </select>
             </div>
+
             <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Miktar</label>
-              <input type="number" step="0.01" value={soldQuantity} onChange={(e) => setSoldQuantity(e.target.value)} required placeholder="0" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
+              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Satılan Miktar</label>
+              <input 
+                type="number" 
+                step="1" 
+                value={soldQuantity} 
+                onChange={(e) => handleProductOrQuantityChange(productId, e.target.value)} 
+                required 
+                placeholder="Örn: 10" 
+                className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" 
+              />
             </div>
-            <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Maliyet</label>
-              <input type="number" step="0.01" value={totalCost} onChange={(e) => setTotalCost(e.target.value)} required placeholder="0.00" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
+
+            <div className="grid grid-cols-2 gap-2">
+              <div>
+                <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Toplam Maliyet (₺)</label>
+                <input type="text" value={totalCost} readOnly placeholder="0.00" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-slate-100 text-sm text-slate-500 cursor-not-allowed" />
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Toplam Tutar (₺)</label>
+                <input type="text" value={totalAmount} readOnly placeholder="0.00" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-slate-100 text-sm text-slate-500 cursor-not-allowed" />
+              </div>
             </div>
+
             <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Tutar</label>
-              <input type="number" step="0.01" value={totalAmount} onChange={(e) => setTotalAmount(e.target.value)} required placeholder="0.00" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
-            </div>
-            <div>
-              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Kâr</label>
-              <input type="number" step="0.01" value={profit} onChange={(e) => setProfit(e.target.value)} required placeholder="0.00" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-surface text-sm" />
+              <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Net Kâr (₺)</label>
+              <input type="text" value={profit} readOnly placeholder="0.00" className="w-full px-3 py-2 border border-outline-variant rounded-lg bg-slate-100 text-sm font-semibold text-green-600 cursor-not-allowed" />
             </div>
 
             <button type="submit" disabled={loading} className="w-full bg-primary text-white py-2.5 rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm disabled:opacity-50">
@@ -138,11 +195,11 @@ export default function SalesPage() {
           </form>
         </div>
 
-        {/* SAĞ TARAF: Dinamik Satış Tablosu */}
+        {/* SAĞ TARAF: Tablo */}
         <div className="lg:col-span-2 bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm flex flex-col">
           <h4 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
             <ShoppingCart className="text-primary" size={22} />
-            Mevcut Satış Kayıtları ({salesList.length})
+            Mevcut Satış Kayıtları
           </h4>
 
           <div className="overflow-x-auto flex-1">
@@ -160,9 +217,7 @@ export default function SalesPage() {
               <tbody className="divide-y divide-outline-variant text-sm">
                 {salesList.length === 0 ? (
                   <tr>
-                    <td colSpan={6} className="py-6 text-center text-on-surface-variant">
-                      Henüz kayıtlı satış bulunmuyor. Sol taraftan ekleme yapabilirsin!
-                    </td>
+                    <td colSpan={6} className="py-6 text-center text-on-surface-variant">Henüz kayıtlı satış bulunmuyor.</td>
                   </tr>
                 ) : (
                   salesList.map((sale) => (

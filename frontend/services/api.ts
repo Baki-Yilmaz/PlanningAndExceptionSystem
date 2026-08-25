@@ -1,7 +1,6 @@
-const BASE_URL = "https://localhost:7016/api";
+const BASE_URL = 'https://localhost:7016/api';
 
 export async function apiClient<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  
   const auth = typeof window !== 'undefined' ? localStorage.getItem('auth') : null;
 
   const response = await fetch(`${BASE_URL}${endpoint}`, {
@@ -13,14 +12,15 @@ export async function apiClient<T>(endpoint: string, options?: RequestInit): Pro
     ...options,
   });
 
-  if (!response.ok) {
+    if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(errorText || 'Merkezi API bağlantısında bir hata oluştu.');
+    console.error(`API Hatası (${endpoint}):`, errorText);
+    throw new Error(errorText || 'Merkezî API bağlantısında bir hata oluştu');
   }
 
-  if(response.status === 204) {
+  if (response.status === 204) {
     return {} as T;
   }
-
+  
   return response.json();
 }

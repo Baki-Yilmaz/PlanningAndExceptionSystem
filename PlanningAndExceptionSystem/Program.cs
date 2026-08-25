@@ -1,9 +1,11 @@
-﻿using DevExpress.Data.PLinq.Helpers;
+﻿using DevExpress.Data.Helpers;
+using DevExpress.Data.PLinq.Helpers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using PlanningAndExceptionSystem;
 using PlanningAndExceptionSystem.Repositories.Interfaces;
 using PlanningAndExceptionSystem.Repositories.Repositories;
+using PlanningAndExceptionSystem.Services;
 using PlanningAndExceptionSystem.Services.Interfaces;
 using PlanningAndExceptionSystem.Services.Services;
 
@@ -25,6 +27,13 @@ builder.Services.AddScoped<IPlanningWeekService, PlanningWeekService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IShopService, ShopService>();
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+builder.Services.AddScoped<ISalesPlanService, SalesPlanService>();
+builder.Services.AddScoped<IPlanningMonthService, PlanningMonthService>();
+builder.Services.AddScoped<IPlanningExceptionService, PlanningExceptionService>();
+builder.Services.AddScoped<IPlanningExceptionRepository, PlanningExceptionsRepository>();
+builder.Services.AddScoped<IExceptionActionService, ExceptionActionService>();
+builder.Services.AddScoped<IActionApprovalService, ActionApprovalService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -53,9 +62,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
-app.UseMiddleware<UseCustomExceptionHandler>();
+//app.UseMiddleware<UseCustomExceptionHandler>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

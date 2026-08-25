@@ -3,64 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{08B9BDEA-818B-422E-8C5E-FCDC43978604}|PlanningAndExceptionSystem.Services\\PlanningAndExceptionSystem.Services.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.services\\services\\actionapprovalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B9BDEA-818B-422E-8C5E-FCDC43978604}|PlanningAndExceptionSystem.Services\\PlanningAndExceptionSystem.Services.csproj|solutionrelative:planningandexceptionsystem.services\\services\\actionapprovalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.models\\codefirst\\actionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|solutionrelative:planningandexceptionsystem.models\\codefirst\\actionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\Migrations\\20260820124936_AddMailAndPasswordToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PlanningAndExceptionSystem.Models\\Migrations\\20260820124936_AddMailAndPasswordToUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.models\\codefirst\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|solutionrelative:planningandexceptionsystem.models\\codefirst\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\security\\basicauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\security\\basicauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\controllers\\actualsalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\controllers\\actualsalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08B9BDEA-818B-422E-8C5E-FCDC43978604}|PlanningAndExceptionSystem.Services\\PlanningAndExceptionSystem.Services.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.services\\interfaces\\iactualsalesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B9BDEA-818B-422E-8C5E-FCDC43978604}|PlanningAndExceptionSystem.Services\\PlanningAndExceptionSystem.Services.csproj|solutionrelative:planningandexceptionsystem.services\\interfaces\\iactualsalesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\controllers\\shopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\controllers\\shopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\controllers\\custombasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\controllers\\custombasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\controllers\\countriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\controllers\\countriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\controllers\\planningweekscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\controllers\\planningweekscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.models\\codefirst\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|solutionrelative:planningandexceptionsystem.models\\codefirst\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.models\\codefirst\\actualsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|solutionrelative:planningandexceptionsystem.models\\codefirst\\actualsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\usecustomexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\usecustomexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.models\\migrations\\20260820125528_addmailandpasswordtouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|solutionrelative:planningandexceptionsystem.models\\migrations\\20260820125528_addmailandpasswordtouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,184 +30,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20260820124936_AddMailAndPasswordToUser.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\Migrations\\20260820124936_AddMailAndPasswordToUser.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\Migrations\\20260820124936_AddMailAndPasswordToUser.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\Migrations\\20260820124936_AddMailAndPasswordToUser.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\Migrations\\20260820124936_AddMailAndPasswordToUser.cs",
-              "ViewState": "AgIAAIsBAAAAAAAAAAAiwKABAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ActionApprovalService.cs",
+              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
+              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
+              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
+              "RelativeToolTip": "PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T12:49:36.278Z"
+              "WhenOpened": "2026-08-25T20:38:22.643Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ActionApproval.cs",
+              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
+              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
+              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
+              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T20:36:33.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Program.cs",
               "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Program.cs",
               "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Program.cs",
               "RelativeToolTip": "PlanningAndExceptionSystem\\Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAYwDQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T12:47:26.21Z",
+              "WhenOpened": "2026-08-25T20:32:33.048Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20260820125528_AddMailAndPasswordToUser.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\Migrations\\20260820125528_AddMailAndPasswordToUser.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\Migrations\\20260820125528_AddMailAndPasswordToUser.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\Migrations\\20260820125528_AddMailAndPasswordToUser.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\Migrations\\20260820125528_AddMailAndPasswordToUser.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAowCUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T12:55:28.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\User.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\CodeFirst\\User.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\User.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\CodeFirst\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T12:33:09.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BasicAuthenticationHandler.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Security\\BasicAuthenticationHandler.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Security\\BasicAuthenticationHandler.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Security\\BasicAuthenticationHandler.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Security\\BasicAuthenticationHandler.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswCoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T12:18:35.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ActualSalesController.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\ActualSalesController.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Controllers\\ActualSalesController.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\ActualSalesController.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Controllers\\ActualSalesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T11:26:48.165Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IActualSalesService.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Services\\Interfaces\\IActualSalesService.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Services\\Interfaces\\IActualSalesService.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Services\\Interfaces\\IActualSalesService.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Services\\Interfaces\\IActualSalesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T11:29:37.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Shopscontroller.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\Shopscontroller.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Controllers\\Shopscontroller.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\Shopscontroller.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Controllers\\Shopscontroller.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T11:26:06.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CountriesController.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\CountriesController.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Controllers\\CountriesController.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\CountriesController.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Controllers\\CountriesController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADgvwoAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T10:53:14.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CustomBaseController.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\CustomBaseController.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Controllers\\CustomBaseController.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\CustomBaseController.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Controllers\\CustomBaseController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T08:10:36.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAASwAgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T10:53:27.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PlanningWeeksController.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\PlanningWeeksController.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Controllers\\PlanningWeeksController.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Controllers\\PlanningWeeksController.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\Controllers\\PlanningWeeksController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADgvw4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T10:53:19.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Shop.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\Shop.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\CodeFirst\\Shop.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\Shop.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\CodeFirst\\Shop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-20T08:10:28.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ActualSale.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\ActualSale.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\CodeFirst\\ActualSale.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\ActualSale.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\CodeFirst\\ActualSale.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAzwAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T12:44:18.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UseCustomExceptionHandler.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\UseCustomExceptionHandler.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\UseCustomExceptionHandler.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\UseCustomExceptionHandler.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem\\UseCustomExceptionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T08:10:34.988Z"
             }
           ]
         }
