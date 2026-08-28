@@ -3,12 +3,15 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Lock, Mail } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  const {login} = useAuth();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +20,7 @@ export default function LoginPage() {
     try {
       const base64Credentials = btoa(`${email}:${password}`);
 
-      const response = await fetch('https://localhost:7016/api/Shops', {
+      const response = await fetch('https://localhost:7016/api/Auth/login-check', {
         method: 'GET',
         headers: {
           'Authorization': `Basic ${base64Credentials}`,
@@ -26,9 +29,12 @@ export default function LoginPage() {
       });
 
       if (response.ok) {
-        localStorage.setItem('auth', base64Credentials);
+        const userData = await response.json();
+        const userRole = userData.role || "Staff";
+
+        login(email, password, userRole);
         alert('Giriş başarılı!');
-        router.push('/');
+        router.push('/dashboard');
       } else {
         alert('Giriş başarısız: Kullanıcı adı veya şifre hatalı!');
       }

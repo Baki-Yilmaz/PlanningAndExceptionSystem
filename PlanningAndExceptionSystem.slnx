@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="PlanningAndExceptionSystem.Models/PlanningAndExceptionSystem.Models.csproj" Id="5699b703-7ff0-4499-a048-5416483bfaaa" />
-  <Project Path="PlanningAndExceptionSystem.Services/PlanningAndExceptionSystem.Services.csproj" Id="08b9bdea-818b-422e-8c5e-fcdc43978604" />
+  <Project Path="PlanningAndExceptionSystem.Models/PlanningAndExceptionSystem.Models.csproj" />
+  <Project Path="PlanningAndExceptionSystem.Services/PlanningAndExceptionSystem.Services.csproj" />
   <Project Path="PlanningAndExceptionSystem/PlanningAndExceptionSystem.csproj" />
-  <Project Path="Repositories/PlanningAndExceptionSystem.Repositories.csproj" Id="294bcb2f-9728-426b-b6dd-fff20ec77ac1" />
+  <Project Path="Repositories/PlanningAndExceptionSystem.Repositories.csproj" />
 </Solution>

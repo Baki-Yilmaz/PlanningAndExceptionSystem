@@ -25,8 +25,8 @@ export default function ShopsPage() {
         getCountries().catch(() => [])
       ]);
 
-      setShopsList(Array.isArray(shopRes) ? shopRes : shopRes.data || []);
-      setCountriesList(Array.isArray(countryRes) ? countryRes : countryRes.data || []);
+      setShopsList(Array.isArray(shopRes) ? shopRes : (shopRes as any).data || []);
+      setCountriesList(Array.isArray(countryRes) ? countryRes : (countryRes as any).data || []);
     } catch (error) {
       console.error('Veriler yüklenirken hata oluştu:', error);
     }

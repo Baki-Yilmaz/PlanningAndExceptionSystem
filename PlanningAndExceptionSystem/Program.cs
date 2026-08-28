@@ -34,6 +34,7 @@ builder.Services.AddScoped<IPlanningExceptionService, PlanningExceptionService>(
 builder.Services.AddScoped<IPlanningExceptionRepository, PlanningExceptionsRepository>();
 builder.Services.AddScoped<IExceptionActionService, ExceptionActionService>();
 builder.Services.AddScoped<IActionApprovalService, ActionApprovalService>();
+builder.Services.AddScoped<IExceptionRuleService, ExceptionRuleService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -67,6 +68,7 @@ if (app.Environment.IsDevelopment())
 
 //app.UseMiddleware<UseCustomExceptionHandler>();
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 

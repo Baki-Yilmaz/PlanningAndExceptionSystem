@@ -1,15 +1,15 @@
 const BASE_URL = 'https://localhost:7016/api';
 
 export async function apiClient<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  const auth = typeof window !== 'undefined' ? localStorage.getItem('auth') : null;
+  const auth = typeof window !== 'undefined' ? localStorage.getItem('auth') ||localStorage.getItem('auth_credentials') : null;
 
   const response = await fetch(`${BASE_URL}${endpoint}`, {
+    ...options,
     headers: {
       'Content-Type': 'application/json',
       ...(auth ? { 'Authorization': `Basic ${auth}` } : {}),
       ...options?.headers,
     },
-    ...options,
   });
 
     if (!response.ok) {

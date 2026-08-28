@@ -3,6 +3,10 @@
 import { useState, useEffect } from 'react';
 import { AlertTriangle, RefreshCw, CheckCircle, X, ShieldCheck, Check, XCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
+import {getSalesPlans} from '../../services/planService';
+import {getExceptionRules} from '../../services/exceptionruleService';
+import { useAuth } from '../context/AuthContext';
+
 import { 
   calculateExceptions, 
   getPlanningExceptions, 
@@ -15,6 +19,8 @@ export default function ExceptionsPage() {
   const [exceptionsList, setExceptionsList] = useState<any[]>([]);
   const [actionsList, setActionsList] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [plansList, setPlansList] = useState<any[]>([]);
+  const [exceptionruleList, setExceptionRuleList] = useState<any[]>([]);
 
   // Modal ve Form State'leri
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,19 +29,29 @@ export default function ExceptionsPage() {
   const [notes, setNotes] = useState('');
   const [submittingAction, setSubmittingAction] = useState(false);
 
+  const {hasRole} = useAuth();
+  const canCreateActions = hasRole(['admin', 'Manager']);
+
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
-      const [excRes, actRes] = await Promise.all([
+      const [excRes, actRes, planRes, rulesRes] = await Promise.all([
         getPlanningExceptions(),
-        getExceptionActions().catch(() => [])
+        getExceptionActions().catch(() => []),
+        getSalesPlans().catch(() => []),
+        getExceptionRules().catch(() => [])
       ]);
       
-      setExceptionsList(Array.isArray(excRes) ? excRes : excRes.data || []);
-      setActionsList(Array.isArray(actRes) ? actRes : actRes.data || []);
+      console.log("Kurallar apıdan böyle geldi:", rulesRes);
+
+      setExceptionsList(Array.isArray(excRes) ? excRes : (excRes as any).data || []);
+      setActionsList(Array.isArray(actRes) ? actRes : (actRes as any).data || []);
+      setPlansList(Array.isArray(planRes) ? planRes : (planRes as any).data || []);
+      setExceptionRuleList(Array.isArray(rulesRes) ? rulesRes : (rulesRes as any).data || []);
+
     } catch (error) {
       console.error('Veriler yüklenirken hata oluştu:', error);
     }
@@ -103,7 +119,7 @@ export default function ExceptionsPage() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto pb-12 relative space-y-8">
+    <div className="w-full max-w-7xl mx-auto h-full overflow-y-auto pr-2">
       
       <div className="flex justify-between items-center">
         <div>
@@ -113,6 +129,7 @@ export default function ExceptionsPage() {
           </p>
         </div>
         
+        {canCreateActions && (
         <button 
           onClick={handleCalculateExceptions} 
           disabled={loading}
@@ -121,6 +138,7 @@ export default function ExceptionsPage() {
           <RefreshCw size={18} className={loading ? "animate-spin" : ""} />
           {loading ? 'Hesaplanıyor...' : 'Sapmaları Hesapla'}
         </button>
+        )}
       </div>
 
       <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm flex flex-col">
@@ -133,8 +151,7 @@ export default function ExceptionsPage() {
           <table className="w-full text-left border-collapse min-w-[700px]">
             <thead>
               <tr className="border-b border-outline-variant text-xs font-semibold text-on-surface-variant uppercase">
-                <th className="py-3 px-4">ID</th>
-                <th className="py-3 px-4">Plan ID</th>
+                <th className="py-3 px-4">Plan Kodu</th>
                 <th className="py-3 px-4">Kural ID</th>
                 <th className="py-3 px-4">Sapma (%)</th>
                 <th className="py-3 px-4">Durum</th>
@@ -151,9 +168,8 @@ export default function ExceptionsPage() {
               ) : (
                 exceptionsList.map((exc) => (
                   <tr key={exc.id} className="hover:bg-surface-container-low transition-colors">
-                    <td className="py-3 px-4 font-semibold text-primary">#{exc.id}</td>
-                    <td className="py-3 px-4 text-on-surface">Plan #{exc.salesPlanId}</td>
-                    <td className="py-3 px-4 text-on-surface-variant">Kural #{exc.exceptionRuleId}</td>
+                    <td className="py-3 px-4 text-on-surface">{plansList.find((p) => p.id === exc.salesPlanId)?.salesPlanCode || 'Bilinmiyor'}</td>
+                    <td className="py-3 px-4 text-on-surface-variant">{exceptionruleList.find((r) => r.id == exc.exce)}</td>
                     <td className="py-3 px-4">
                       <span className={`font-bold ${exc.actualDeviation < 0 ? 'text-red-500' : 'text-green-500'}`}>
                         %{exc.actualDeviation.toFixed(2)}
@@ -168,12 +184,16 @@ export default function ExceptionsPage() {
                       </span>
                     </td>
                     <td className="py-3 px-4">
+                      {canCreateActions ? (
                       <button 
                         onClick={() => openActionModal(exc.id)}
                         className="text-primary font-medium hover:underline text-sm flex items-center gap-1"
                       >
                         <CheckCircle size={16} /> Aksiyon Al
                       </button>
+                      ) : (
+                        <span className='text-on-surface-variant italic text-sm'>-</span>
+                      )}
                     </td>
                   </tr>
                 ))
@@ -226,6 +246,7 @@ export default function ExceptionsPage() {
                     </td>
                     <td className="py-3 px-4 text-right">
                       {act.status === 'Bekliyor' ? (
+                        canCreateActions ? (
                         <div className="flex justify-end gap-2">
                           <button 
                             onClick={() => handleApproval(act.id, true)}
@@ -240,6 +261,9 @@ export default function ExceptionsPage() {
                             <XCircle size={14} /> Reddet
                           </button>
                         </div>
+                        ) : (
+                          <span className='text-on-surface-variant text-sx italic'>Yetki Bekleniyor</span>
+                        )
                       ) : (
                         <span className="text-on-surface-variant text-xs italic">İşlem Tamamlandı</span>
                       )}

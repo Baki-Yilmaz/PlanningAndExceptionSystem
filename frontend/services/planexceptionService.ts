@@ -7,6 +7,10 @@ export async function calculateExceptions() {
   });
 }
 
+export async function getExceptionRules() {
+  return apiClient<any[]>('/ExceptionRule');
+}
+
 // 2. Oluşan Sapmaları (Alarmları) Listele
 export async function getPlanningExceptions() {
   return apiClient<any[]>('/PlanningExceptions');

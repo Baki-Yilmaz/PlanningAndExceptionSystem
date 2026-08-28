@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 import { PlusCircle, Calendar } from 'lucide-react';
 import { createSalesPlan, getSalesPlans, getCategoriesForPlan, getPlanningMonthsForPlan, getUsersForPlan } from '../../services/planService';
 import toast from 'react-hot-toast';
@@ -18,6 +19,9 @@ export default function PlansPage() {
   const [plansList, setPlansList] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
+const {hasRole} = useAuth();
+const canCreatePlan = hasRole(['admin', 'Manager', 'Planner']);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -31,17 +35,27 @@ export default function PlansPage() {
         getUsersForPlan().catch(() => [])
       ]);
 
-      const plans = Array.isArray(plansRes) ? plansRes : plansRes.data || [];
+      const plans = Array.isArray(plansRes) ? plansRes : (plansRes as any).data || [];
       setPlansList(plans);
-      setCategoriesList(Array.isArray(catRes) ? catRes : catRes.data || []);
-      setMonthsList(Array.isArray(monthRes) ? monthRes : monthRes.data || []);
-      setUsersList(Array.isArray(userRes) ? userRes : userRes.data || []);
+      setCategoriesList(Array.isArray(catRes) ? catRes : (catRes as any).data || []);
+      setMonthsList(Array.isArray(monthRes) ? monthRes : (monthRes as any).data || []);
+      setUsersList(Array.isArray(userRes) ? userRes : (userRes as any).data || []);
 
       generateSequentialCode(plans.length + 1);
     } catch (error) {
       console.error('Veriler yüklenirken hata oluştu:', error);
     }
   };
+
+  const categoryMap: Record<number, string> = {};
+  categoriesList.forEach((c: any) => {
+    categoryMap[c.id] = c.name || c.categoryName || `Kategori ${c.id}`;
+  });
+
+  const userNameMap: Record<number, string> = {};
+  usersList.forEach((u: any) => {
+    userNameMap[u.id] = u.name || u.email || `Kullanıcı #${u.id}`;
+  });
 
   const generateSequentialCode = (nextNumber: number) => {
     const year = new Date().getFullYear();
@@ -100,6 +114,7 @@ export default function PlansPage() {
             Yeni Satış Planı Oluştur
           </h4>
 
+        {canCreatePlan ? (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Plan Kodu</label>
@@ -151,6 +166,12 @@ export default function PlansPage() {
               {loading ? 'Oluşturuluyor...' : 'Planı Kaydet'}
             </button>
           </form>
+        ) : (
+          <div className="bg-red-500 border border-red-200 text-black-800 p-10 rounded-lg text-bm text-center">
+              <span className="material-symbols-outlined block text-3xl mb-auto mx-auto">lock</span>
+              <p>Yeni plan oluşturma yetkiniz bulunmamaktadır.</p>
+            </div>
+          )}
         </div>
 
         {/* SAĞ TARAF: Planlar Tablosu */}
@@ -166,9 +187,9 @@ export default function PlansPage() {
                 <tr className="border-b border-outline-variant text-xs font-semibold text-on-surface-variant uppercase">
                   <th className="py-3 px-4">Plan Kodu</th>
                   <th className="py-3 px-4">Hedef Kâr</th>
-                  <th className="py-3 px-4">Kategori ID</th>
-                  <th className="py-3 px-4">Yönetici ID</th>
-                  <th className="py-3 px-4">Ay ID</th>
+                  <th className="py-3 px-4">Kategori</th>
+                  <th className="py-3 px-4">Yönetici</th>
+                  <th className="py-3 px-4">Planlama Ayı</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-outline-variant text-sm">
@@ -177,15 +198,21 @@ export default function PlansPage() {
                     <td colSpan={5} className="py-6 text-center text-on-surface-variant">Henüz oluşturulmuş bir satış planı bulunmuyor.</td>
                   </tr>
                 ) : (
-                  plansList.map((plan) => (
-                    <tr key={plan.id} className="hover:bg-surface-container-low transition-colors">
-                      <td className="py-3 px-4 font-semibold text-primary">{plan.salesPlanCode}</td>
-                      <td className="py-3 px-4 text-green-600 font-semibold">₺{plan.targetProfit}</td>
-                      <td className="py-3 px-4 text-on-surface-variant">{plan.categoryId}</td>
-                      <td className="py-3 px-4 text-on-surface-variant">#{plan.userId}</td>
-                      <td className="py-3 px-4 text-on-surface-variant">{plan.planningMonthId}</td>
-                    </tr>
-                  ))
+                  plansList.map((plan) => {
+                    const categoryName = categoriesList.find((c: any) => c.id === plan.categoryId)?.name || c.categoryName || `Kategori #${plan.categoryId}`;
+                    const userName = usersList.find((u: any) => u.id === plan.userId)?.name || usersList.find((u: any) => u.id === plan.userId)?.email || `Yönetici #${plan.userId}`;
+                    const monthName = monthsList.find((m: any) => m.id === plan.planningMonthId)?.name || monthsList.find((m: any) => m.id === plan.planningMonthId)?.monthName || `Ay #${plan.planningMonthId || '-'}`;
+
+                    return (
+                      <tr key={plan.id} className="hover:bg-surface-container-low transition-colors">
+                        <td className="py-3 px-4 font-semibold text-primary">{plan.salesPlanCode}</td>
+                        <td className="py-3 px-4 text-green-600 font-semibold">₺{Number(plan.targetProfit).toLocaleString('tr-TR')}</td>
+                        <td className="py-3 px-4 font-medium text-on-surface">{categoryName}</td>
+                        <td className="py-3 px-4 text-on-surface-variant">{userName}</td>
+                        <td className="py-3 px-4 text-on-surface-variant">{monthName}</td>
+                      </tr>
+                    );
+                  })
                 )}
               </tbody>
             </table>

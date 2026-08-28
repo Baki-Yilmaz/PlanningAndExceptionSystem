@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08B9BDEA-818B-422E-8C5E-FCDC43978604}|PlanningAndExceptionSystem.Services\\PlanningAndExceptionSystem.Services.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.services\\services\\actionapprovalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B9BDEA-818B-422E-8C5E-FCDC43978604}|PlanningAndExceptionSystem.Services\\PlanningAndExceptionSystem.Services.csproj|solutionrelative:planningandexceptionsystem.services\\services\\actionapprovalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem.models\\codefirst\\actionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5699B703-7FF0-4499-A048-5416483BFAAA}|PlanningAndExceptionSystem.Models\\PlanningAndExceptionSystem.Models.csproj|solutionrelative:planningandexceptionsystem.models\\codefirst\\actionapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|c:\\users\\hprkst88\\source\\repos\\planningandexceptionsystem\\planningandexceptionsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35FD11AE-E993-B2B9-32D1-9012E9EE82B1}|PlanningAndExceptionSystem\\PlanningAndExceptionSystem.csproj|solutionrelative:planningandexceptionsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,40 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ActionApprovalService.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Services\\Services\\ActionApprovalService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T20:38:22.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ActionApproval.cs",
-              "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
-              "RelativeDocumentMoniker": "PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
-              "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
-              "RelativeToolTip": "PlanningAndExceptionSystem.Models\\CodeFirst\\ActionApproval.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T20:36:33.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Program.cs",
               "RelativeDocumentMoniker": "PlanningAndExceptionSystem\\Program.cs",
               "ToolTip": "C:\\Users\\HPRKST88\\source\\repos\\PlanningAndExceptionSystem\\PlanningAndExceptionSystem\\Program.cs",
               "RelativeToolTip": "PlanningAndExceptionSystem\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T20:32:33.048Z",
+              "WhenOpened": "2026-08-28T11:29:01.759Z",
               "EditorCaption": ""
             }
           ]

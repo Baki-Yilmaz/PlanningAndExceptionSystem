@@ -175,6 +175,18 @@
         }
       }
     },
+    "/api/Auth/login-check": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Brands": {
       "get": {
         "tags": [
@@ -496,6 +508,91 @@
       "delete": {
         "tags": [
           "ExceptionActions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ExceptionRule": {
+      "get": {
+        "tags": [
+          "ExceptionRule"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ExceptionRule"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExceptionRule"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExceptionRule"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExceptionRule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ExceptionRule/{id}": {
+      "get": {
+        "tags": [
+          "ExceptionRule"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ExceptionRule"
         ],
         "parameters": [
           {
@@ -1922,6 +2019,9 @@
       "name": "ActualSales"
     },
     {
+      "name": "Auth"
+    },
+    {
       "name": "Brands"
     },
     {
@@ -1932,6 +2032,9 @@
     },
     {
       "name": "ExceptionActions"
+    },
+    {
+      "name": "ExceptionRule"
     },
     {
       "name": "Inventories"

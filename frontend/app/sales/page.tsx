@@ -36,10 +36,10 @@ export default function SalesPage() {
         getProductsForSales().catch(() => [])
       ]);
 
-      setSalesList(Array.isArray(salesRes) ? salesRes : salesRes.data || []);
-      setShopsList(Array.isArray(shopRes) ? shopRes : shopRes.data || []);
-      setMonthsList(Array.isArray(monthRes) ? monthRes : monthRes.data || []);
-      setProductsList(Array.isArray(prodRes) ? prodRes : prodRes.data || []);
+      setSalesList(Array.isArray(salesRes) ? salesRes : (salesRes as any).data || []);
+      setShopsList(Array.isArray(shopRes) ? shopRes : (shopRes as any).data || []);
+      setMonthsList(Array.isArray(monthRes) ? monthRes : (monthRes as any).data || []);
+      setProductsList(Array.isArray(prodRes) ? prodRes : (prodRes as any).data || []);
     } catch (error) {
       console.error('Veriler yüklenirken hata oluştu:', error);
     }

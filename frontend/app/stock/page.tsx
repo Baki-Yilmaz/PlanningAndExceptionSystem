@@ -40,10 +40,10 @@ export default function StockPage() {
         getShopsForStock().catch(() => [])
       ]);
 
-      setProductsList(Array.isArray(prodRes) ? prodRes : prodRes.data || []);
-      setBrandsList(Array.isArray(brandRes) ? brandRes : brandRes.data || []);
-      setCategoriesList(Array.isArray(catRes) ? catRes : catRes.data || []);
-      setShopsList(Array.isArray(shopRes) ? shopRes : shopRes.data || []);
+      setProductsList(Array.isArray(prodRes) ? prodRes : (prodRes as any).data || []);
+      setBrandsList(Array.isArray(brandRes) ? brandRes : (brandRes as any).data || []);
+      setCategoriesList(Array.isArray(catRes) ? catRes : (catRes as any).data || []);
+      setShopsList(Array.isArray(shopRes) ? shopRes : (shopRes as any).data || []);
     } catch (error) {
       console.error('Veriler yüklenirken hata oluştu:', error);
     }
@@ -121,7 +121,7 @@ export default function StockPage() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto pb-12">
+    <div className="w-full max-w-7xl mx-auto h-full overflow-y-auto pr-2">
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-on-surface mb-1">Stok & Ürün Yönetimi</h3>
         <p className="text-sm text-on-surface-variant">Yeni ürünler tanımlayın ve mağazalara stok girişleri yapın.</p>
